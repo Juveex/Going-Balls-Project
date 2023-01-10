@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Checkpoint_Script : MonoBehaviour
 {
-    public Transform chracter;
+    public Transform character;
 
     private Vector3 spawnPoint;
     void Start()
@@ -13,9 +13,9 @@ public class Checkpoint_Script : MonoBehaviour
     }
     void Update()
     {
-        if (chracter.transform.position.y < -20f)
+        if (character.transform.position.y < -20f)
         {
-            chracter.position = spawnPoint;
+            character.position = spawnPoint;
         }
 
     }
@@ -37,6 +37,6 @@ public class Checkpoint_Script : MonoBehaviour
     }
     private void spawn()
     {
-        chracter.position = spawnPoint;
+        character.position = spawnPoint;
     }
 }
