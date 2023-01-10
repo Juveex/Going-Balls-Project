@@ -13,7 +13,7 @@ public class Checkpoint_Script : MonoBehaviour
     }
     void Update()
     {
-        if (character.transform.position.y < -20f)
+        if (character.transform.position.y < -10f)
         {
             character.position = spawnPoint;
         }
@@ -22,17 +22,17 @@ public class Checkpoint_Script : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("CheckPoint"))
+        if (other.CompareTag("Checkpoint"))
         {
             spawnPoint = other.transform.position;
 
         }
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            //Destroy(gameObject);
-            spawn();
+        //if (other.gameObject.CompareTag("Enemy"))
+        //{
+            
+            //spawn();
 
-        }
+        //}
 
     }
     private void spawn()

@@ -10,8 +10,8 @@ public class Move_Script : MonoBehaviour
     public int speed;
     public int counter;
     public int objectNumber;
-    public Text score;
-    public Text endgame;
+    //public Text score;
+    //public Text endgame;
 
     void Start()
     {
@@ -29,13 +29,13 @@ public class Move_Script : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.SetActive(false);
+        //other.gameObject.SetActive(false);
         counter++;
-        score.text = "Score: " + counter;
+        //score.text = "Score: " + counter;
         if (counter == objectNumber)
         {
-            endgame.gameObject.SetActive(true);
-            score.gameObject.SetActive(false);
+            //endgame.gameObject.SetActive(true);
+            //score.gameObject.SetActive(false);
 
 
         }
