@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCheckPoint : MonoBehaviour
+public class Checkpoint_Script : MonoBehaviour
 {
     public Transform chracter;
 
