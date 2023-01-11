@@ -4,10 +4,10 @@ using System.Collections;
 public class Player_Controller : MonoBehaviour
 {
     public float speed;
-    private Rigidbody rb;
+    private Rigidbody _rb;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
 
     }
     // Use t$$anonymous$$s for initialization
@@ -19,7 +19,7 @@ public class Player_Controller : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         movement = Camera.main.transform.TransformDirection(movement);
-        rb.AddForce(movement * speed * Time.deltaTime);
+        _rb.AddForce(movement * speed * Time.deltaTime);
     }
     
     //public void finish()

@@ -7,7 +7,7 @@ public class Checkpoint_Script : MonoBehaviour
     public Transform character;
 
     private Vector3 _spawnPoint;
-    private Rigidbody rb;
+    private Rigidbody _rb;
     void Start()
     {
 
@@ -46,5 +46,6 @@ public class Checkpoint_Script : MonoBehaviour
     private void spawn()
     {
         character.position = _spawnPoint;
+
     }
 }
