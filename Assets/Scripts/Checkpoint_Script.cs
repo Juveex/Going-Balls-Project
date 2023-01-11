@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Checkpoint_Script : MonoBehaviour
 {
+    
     public Transform character;
 
-    private Vector3 spawnPoint;
+    private Vector3 _spawnPoint;
+    private Rigidbody rb;
     void Start()
     {
 
@@ -15,7 +16,7 @@ public class Checkpoint_Script : MonoBehaviour
     {
         if (character.transform.position.y < -10f)
         {
-            character.position = spawnPoint;
+            character.position = _spawnPoint;
         }
 
     }
@@ -24,23 +25,26 @@ public class Checkpoint_Script : MonoBehaviour
 
         if (other.CompareTag("Checkpoint"))
         {
-            spawnPoint = other.transform.position;
+            _spawnPoint = other.transform.position;
 
         }
         //if ( other.CompareTag("Finish"))
         //{
             //finish();
         //}
-        //if (other.gameObject.CompareTag("Enemy"))
-        //{
-            
+        if (other.gameObject.CompareTag("Kill"))
+           {
+            //rb.velocity = Vector3.zero;
+            //rb.angularVelocity = Vector3.zero;
+
+            character.position = _spawnPoint;
             //spawn();
 
-        //}
+        }
 
     }
     private void spawn()
     {
-        character.position = spawnPoint;
+        character.position = _spawnPoint;
     }
 }
