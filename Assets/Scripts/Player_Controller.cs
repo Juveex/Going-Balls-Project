@@ -21,4 +21,11 @@ public class Player_Controller : MonoBehaviour
         movement = Camera.main.transform.TransformDirection(movement);
         rb.AddForce(movement * speed * Time.deltaTime);
     }
+    
+    //public void finish()
+    //{
+     //   rb.velocity = Vector3.zero;
+     //   rb.angularVelocity = Vector3.zero;
+     //   rb.Sleep();
+    //}
 }

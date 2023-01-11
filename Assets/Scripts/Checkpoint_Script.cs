@@ -27,6 +27,10 @@ public class Checkpoint_Script : MonoBehaviour
             spawnPoint = other.transform.position;
 
         }
+        //if ( other.CompareTag("Finish"))
+        //{
+            //finish();
+        //}
         //if (other.gameObject.CompareTag("Enemy"))
         //{
             

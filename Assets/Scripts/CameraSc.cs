@@ -12,10 +12,26 @@ public class CameraSc : MonoBehaviour
     private Vector3 lastDirection;
     private Vector3 currentDirection;
     private Vector3 lookAheadPos;
+    public float minDistance = 5, maxDistance = 15;
 
     void LateUpdate()
     {
         currentDirection = target.position - transform.position;
+
+        // vector directed from the target to the camera
+        Vector3 direction = transform.position - target.position;
+
+        // Our ClampMagnitude
+        if (direction.magnitude < minDistance)
+        {
+            direction = direction.normalized * minDistance;
+        }
+        if (direction.magnitude > maxDistance)
+        {
+            direction = direction.normalized * maxDistance;
+        }
+
+        transform.position = target.position + direction;
 
         if (currentDirection != lastDirection)
         {
