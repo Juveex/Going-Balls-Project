@@ -16041,6 +16041,7 @@ GameObject:
   - component: {fileID: 1741887923}
   - component: {fileID: 1741887922}
   - component: {fileID: 1741887926}
+  - component: {fileID: 1741887929}
   - component: {fileID: 1741887927}
   - component: {fileID: 1741887928}
   m_Layer: 0
@@ -16160,6 +16161,7 @@ MonoBehaviour:
   speed: 15
   counter: 0
   objectNumber: 0
+  isMoving: 1
 --- !u!114 &1741887928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16173,6 +16175,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1741887925}
+--- !u!114 &1741887929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741887921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84004dcb3aa481418cb65e6bd61be6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1763473694
 GameObject:
   m_ObjectHideFlags: 0
@@ -16267,7 +16281,7 @@ GameObject:
   - component: {fileID: 1769884087}
   - component: {fileID: 1769884090}
   - component: {fileID: 1769884089}
-  - component: {fileID: 1769884088}
+  - component: {fileID: 1769884092}
   m_Layer: 0
   m_Name: Checkpoint (4)
   m_TagString: Finish
@@ -16290,19 +16304,6 @@ Transform:
   m_Father: {fileID: 1268131492}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1769884088
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769884086}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.000001, y: 0, z: 10}
-  m_Center: {x: 0.00000043527064, y: 0.22, z: -0.0000047523217}
 --- !u!23 &1769884089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16353,6 +16354,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769884086}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1769884092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769884086}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 5.94, z: 9.999999}
+  m_Center: {x: 0, y: -0.37074602, z: 0}
 --- !u!1001 &1770169986
 PrefabInstance:
   m_ObjectHideFlags: 0
