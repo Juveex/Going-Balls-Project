@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayButton.unity
     guid: db47e21fa7764bb4c9ab5e2fb91d6944
   - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 8c3c054318724fd479b9229a44e7e20f
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
